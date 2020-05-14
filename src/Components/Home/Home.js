@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './Home.css';
+
+
+
 import { withRouter } from 'react-router-dom';
 
 class Home extends Component {
@@ -14,9 +17,16 @@ class Home extends Component {
     }
     render() {
         return (
-            <div>
-                <button onClick={this.handleRedirect}>Explore</button>
+            
+            <div className="homeContainer">
+                <div>
+                    <img src="./assets/images/hamptonLogo.png" alt="Logo"/>
+                    <img src="./assets/images/brain.gif" className="animated"/>
+                    <h1>Hampton Data Services</h1>
+                    <a className="trybtn" onClick={this.handleRedirect}>EXPLORE</a>
+                </div>
             </div>
+
         )
     }
 }

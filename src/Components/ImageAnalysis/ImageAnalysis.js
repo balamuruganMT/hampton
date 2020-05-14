@@ -5,6 +5,9 @@ import Logo from '../../images/logo.png';
 import Upload from '../../images/upload.svg';
 import Profile from '../../images/profile.svg';
 import Banner from '../../images/banner.jpg';
+import Background from '../../images/background.jpeg';
+import search from '../../images/search.svg';
+
 import Dropzone from 'react-dropzone';
 
 class ImageAnalysis extends Component {
@@ -17,13 +20,20 @@ class ImageAnalysis extends Component {
     render() {
         return (
             <div className="mainWrapper">
-                <div className="header">
+                <div className="header" style={{backgroundImage: `url(${Background})`}}>
                     <div className="container">
                         <div className="d-flex">
                             <div className="logo">
-                                <img src={Logo} alt="Logo" height="36" />
+                                <img src={Logo} alt="Logo" height="50" />
+                            </div>
+                            <div className="title">
+                                <h3>Hampton Data Services</h3>
                             </div>
                             <div className="navRight">
+                                <div className="search">
+                                    <input type="text" name="search"/>
+                                    <span><img src={search} width="16" alt="search"/></span>
+                                </div>
                                 <div className="profile">
                                     <img src={Profile} alt="Profile" />
                                 </div>
