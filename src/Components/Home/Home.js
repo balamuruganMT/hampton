@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Home.css';
 
+import logo from '../../images/hamptonLogo.png';
+import faceman from '../../images/faceman.gif';
 
 
 import { withRouter } from 'react-router-dom';
@@ -20,8 +22,8 @@ class Home extends Component {
             
             <div className="homeContainer">
                 <div>
-                    <img src="./assets/images/hamptonLogo.png" alt="Logo"/>
-                    <img src="./assets/images/brain.gif" className="animated"/>
+                    <img src={logo} width="200" alt="Logo"/>
+                    <img src={faceman} width="100" className="animated"/>
                     <h1>Hampton Data Services</h1>
                     <a className="trybtn" onClick={this.handleRedirect}>EXPLORE</a>
                 </div>
