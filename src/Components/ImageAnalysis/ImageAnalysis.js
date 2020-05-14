@@ -4,6 +4,7 @@ import './ImageAnalysis.css';
 import Logo from '../../images/logo.png';
 import Upload from '../../images/upload.svg';
 import Profile from '../../images/profile.svg';
+import Banner from '../../images/banner.jpg';
 
 class ImageAnalysis extends Component{
     constructor(props){
@@ -36,12 +37,13 @@ class ImageAnalysis extends Component{
                         <div className="imgAnalysis">
                             <div className="iaRow">
                                 <div className="box borderedBox">
-                                    <div>
+                                    {/* <div>
                                     <img src={Upload} width="40" alt="upload"/>
                                     <p>Paste / Upload Your Job Description Here!</p>
                                     <span className="or">Or</span>
                                     <div className="browse"><span>BROWSE</span><input type="file" /></div>
-                                    </div>
+                                    </div> */}
+                                    <img src={Banner} className="bannerImg" alt="Banner"/>
                                 </div>
                             </div>
                             <div className="iaRow">
