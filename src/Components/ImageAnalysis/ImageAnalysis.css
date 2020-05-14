@@ -1,0 +1,135 @@
+.container{
+  width:1124px;
+  max-width:90%;
+  margin:0px auto;
+}
+.mainWrapper .header{
+  min-height:60px;
+  background-color:#6f60f4;
+  box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+}
+.d-flex{
+  display: flex;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  height:60px;
+  flex:1 1;
+}
+.navRight {
+  display: flex;
+  align-items: center;
+}
+.navRight .profile{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  overflow: hidden;
+  
+}
+.navRight .profile img{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  object-fit: cover;
+}
+.logo img{
+  filter: brightness(100);
+}
+.mainContainer {
+  margin:30px 0px;
+}
+.mainContainer h3{
+  font-size:24px;
+  font-weight: 400;
+  margin-bottom:15px;
+}
+.imgAnalysis{
+  display: flex;
+  margin-left:-15px;
+  margin-right:-15px;
+}
+.imgAnalysis .iaRow{
+  padding-left:15px;
+  padding-right:15px;
+  flex:1 1;
+}
+.imgAnalysis .iaRow .box{
+  width:100%;
+  min-height:250px;
+  border-radius:5px;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.borderedBox{
+  border:1px dashed rgba(0,0,0,0.2);
+}
+.skillBox{
+  border:1px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.borderedBox .browse{
+  width:150px;
+  height:32px;
+  background-color:#FFFFFF;
+  border:none;
+  border-radius:20px;
+  color:#6f60f4;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:2px solid #6f60f4;
+  margin:5px auto 0px;
+}
+.btnGroup{
+  margin-top:20px;
+}
+.btnGroup .btns{
+  width:120px;
+  height:36px;
+  border:none;
+  border-radius:5px;
+  border:2px solid #6f60f4;
+  font-weight: 600;
+  font-size:12px;
+  margin-right:10px;
+}
+.btnGroup .solidBtn{
+  background-color: #6f60f4;
+  color:#FFFFFF;
+}
+.btnGroup .dashedBtn{
+  background-color: #FFFFFF;
+  color:#6f60f4;
+}
+.borderedBox .browse span{
+  font-size:14px;
+  font-weight: 600;
+}
+.borderedBox .browse input{
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0px;
+  top:0px;
+  border-radius:20px;
+  cursor:pointer;
+  opacity: 0;
+}
+
+.borderedBox  img{
+  margin-bottom:10px;
+}
+.borderedBox .or{
+  font-size:12px;
+  color:#999999;
+  display: inline-block;
+  margin-top:20px;
+}
