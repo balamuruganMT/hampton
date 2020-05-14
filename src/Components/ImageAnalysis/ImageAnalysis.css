@@ -180,3 +180,14 @@
   display: inline-block;
   margin-top:20px;
 }
+.dropzone_error{
+  color: red;
+  font-weight: 600;
+}
+.dropzone_text{
+  cursor: pointer;
+}
+.result_title{
+  text-align: left;
+  font-weight: bold !important;
+}

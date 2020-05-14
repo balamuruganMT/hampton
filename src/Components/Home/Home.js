@@ -23,9 +23,9 @@ class Home extends Component {
             <div className="homeContainer">
                 <div>
                     <img src={logo} width="200" alt="Logo"/>
-                    <img src={faceman} width="100" className="animated"/>
+                    <img src={faceman} width="100" className="animated" alt="gif"/>
                     <h1>Hampton Data Services</h1>
-                    <a className="trybtn" onClick={this.handleRedirect}>EXPLORE</a>
+                    <button className="trybtn" onClick={this.handleRedirect}>EXPLORE</button>
                 </div>
             </div>
 
