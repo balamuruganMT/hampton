@@ -17,14 +17,10 @@ class ImageAnalysis extends Component {
             uploadedFile: '',
             imageBase64data: '',
             formatError: false,
-            resultantData: ''
+            resultantData: {}
         }
     }
 
-    componentDidMount() {
-        let daat = "C:\\Mathu\\Projects\\hds/output/114.jpg";
-        console.log(daat.split("."))
-    }
     handleDropImage = (imageFile) => {
         if (imageFile.length > 0) {
             this.setState({ uploadedFile: imageFile[0] });
@@ -71,6 +67,7 @@ class ImageAnalysis extends Component {
             imageBase64data: '',
             uploadedFile: '',
             formatError: false,
+            resultantData: {}
         })
     }
 
