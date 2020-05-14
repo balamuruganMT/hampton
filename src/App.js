@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import ImageAnalysis from './Components/ImageAnalysis/ImageAnalysis';
+import RouterComponent from './Utils/RouterComponent/RouterComponent';
 
 function App() {
   return (
     <div >
-      <ImageAnalysis />
+      <RouterComponent />
     </div>
   );
 }
