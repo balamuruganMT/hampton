@@ -31,7 +31,7 @@
 .navRight .search span{
   position:absolute;
   right:14px;
-  top:8px;
+  top:5px;
 }
 .navRight .search input{
   width:180px;
@@ -39,7 +39,9 @@
   border-radius:20px;
   background-color: transparent;
   border:2px solid rgba(255,255,255,0.5);
-  
+  color:#FFFFFF;
+  padding-left:15px;
+  box-sizing: border-box;
 }
 .title{
   flex:1 1;
@@ -93,12 +95,13 @@
   border-radius:5px;
   background-color: #ffffff;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
 }
 .borderedBox{
   border:1px dashed rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .borderedBox .bannerImg{
   width:100%;
@@ -107,9 +110,16 @@
 }
 .skillBox{
   border:1px solid rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding:30px;
+}
+.skillBox img{
+  width:250px;
+  max-width:90%;
+  margin:10px auto;
+}
+.skillBox p{
+  font-size:16px;
+  margin-top:10px;
 }
 .borderedBox .browse{
   width:150px;

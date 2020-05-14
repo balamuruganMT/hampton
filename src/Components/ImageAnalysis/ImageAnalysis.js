@@ -60,7 +60,7 @@ class ImageAnalysis extends Component {
                                             <section>
                                                 <div className="dropzone_content" {...getRootProps()}>
                                                     <input {...getInputProps()} />
-                                                    <img src={Upload} width="40" alt="upload" />
+                                                    <img src={Upload} width="40" className="upload" alt="upload" />
                                                     <p>Paste / Upload Your Image Here!</p>
                                                     <span className="or">Or</span>
                                                     <div className="browse"><span>BROWSE</span></div>
@@ -72,7 +72,9 @@ class ImageAnalysis extends Component {
                             </div>
                             <div className="iaRow">
                                 <div className="box skillBox">
-                                    <p>Resulted Output</p>
+                                    <p><b>Name </b> :  Name here</p>
+                                    <p><b>Size </b> :  Size here</p>
+                                    <img src={Banner} alt="Image" />
                                 </div>
                             </div>
                         </div>
