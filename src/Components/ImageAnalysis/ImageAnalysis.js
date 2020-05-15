@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './ImageAnalysis.css';
 
+import banner from '../../images/background.jpeg';
+
 import Logo from '../../images/logo.png';
 import Upload from '../../images/upload.svg';
 import Profile from '../../images/profile.svg';
@@ -81,7 +83,7 @@ class ImageAnalysis extends Component {
         return (
             <div className="mainWrapper">
                 <div className="header" style={{ backgroundImage: `url(${Background})` }}>
-                    <div className="container">
+                    <div className="headercontainer">
                         <div className="d-flex">
                             <div className="logo">
                                 <img src={Logo} alt="Logo" height="50" />
@@ -116,7 +118,7 @@ class ImageAnalysis extends Component {
                                                     {imageBase64data ?
                                                         <img src={imageBase64data} className="bannerImg" alt="Banner" /> :
                                                         <div className="dropzone_text">
-                                                            <img src={Upload} width="40" alt="upload" />
+                                                            <img src={Upload} className="upload" width="40" alt="upload" />
                                                             <p>Paste / Upload Your Image Here!</p>
                                                             <span className="or">Or</span>
                                                             <div className="browse"><span>BROWSE</span></div>
@@ -130,15 +132,15 @@ class ImageAnalysis extends Component {
                                 </div>
                             </div>
                             <div className="iaRow">
-                                <div className="box skillBox">
+                            <div className="box skillBox">
                                     <h3 className="result_title">Results :</h3>
-                                    {Object.keys(resultantData).length !== 0 &&
-                                        <div>
+                                    {/* {/* {Object.keys(resultantData).length !== 0 && /} */}
+                                        <div className="resultBox">
                                             <p><b>Image Classification </b> :  {resultantData.image_classification}</p>
                                             <p><b>Confidence Level </b> :  {resultantData.Confidence_level}</p>
-                                            <img src={resultantData.imageBase64data} alt="outputImg" />
+                                            <img src={banner} alt="outputImg" />
                                         </div>
-                                    }
+                                                {/* } */}
                                 </div>
                             </div>
                         </div>
