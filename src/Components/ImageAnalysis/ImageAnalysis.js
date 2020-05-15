@@ -17,7 +17,8 @@ class ImageAnalysis extends Component {
             uploadedFile: '',
             imageBase64data: '',
             formatError: false,
-            resultantData: {}
+            resultantData: {},
+            isLoading: false
         }
     }
 
@@ -43,6 +44,7 @@ class ImageAnalysis extends Component {
         if (this.state.uploadedFile && this.state.imageBase64data) {
             let formData = new FormData();
             formData.append("file", this.state.uploadedFile);
+            this.setState({ isLoading: true })
             ImageAnalysisService.handleImageAnalysis(formData).then(result => {
                 if (result) {
                     if (result.data) {
@@ -53,10 +55,12 @@ class ImageAnalysis extends Component {
                             image_classification: result.data.image_classification,
                             imageBase64data: base64data
                         }
-                        this.setState({ resultantData: resultobj })
+                        this.setState({ resultantData: resultobj });
+                        this.setState({ isLoading: false });
                     }
                 }
             }).catch(error => {
+                this.setState({ isLoading: false });
                 console.log(error)
             })
         }
@@ -67,12 +71,13 @@ class ImageAnalysis extends Component {
             imageBase64data: '',
             uploadedFile: '',
             formatError: false,
-            resultantData: {}
+            resultantData: {},
+            isLoading: false
         })
     }
 
     render() {
-        const { imageBase64data, formatError, resultantData } = this.state;
+        const { imageBase64data, formatError, resultantData, isLoading } = this.state;
         return (
             <div className="mainWrapper">
                 <div className="header" style={{ backgroundImage: `url(${Background})` }}>
@@ -82,7 +87,7 @@ class ImageAnalysis extends Component {
                                 <img src={Logo} alt="Logo" height="50" />
                             </div>
                             <div className="title">
-                                <h3>Hampton Data Services</h3>
+                                <h3>AI  Data Platform</h3>
                             </div>
                             <div className="navRight">
                                 <div className="search">
@@ -99,7 +104,7 @@ class ImageAnalysis extends Component {
 
                 <div className="mainContainer">
                     <div className="container">
-                        <h3>Image analysis</h3>
+                        <h3>AI powered Image Analytics</h3>
                         <div className="imgAnalysis">
                             <div className="iaRow">
                                 <div className="box borderedBox">
@@ -126,11 +131,11 @@ class ImageAnalysis extends Component {
                             </div>
                             <div className="iaRow">
                                 <div className="box skillBox">
-                                    <h3 className="result_title">Resulted Output :</h3>
+                                    <h3 className="result_title">Results :</h3>
                                     {Object.keys(resultantData).length !== 0 &&
                                         <div>
-                                            <p><b>Confidence Level </b> :  {resultantData.Confidence_level}</p>
                                             <p><b>Image Classification </b> :  {resultantData.image_classification}</p>
+                                            <p><b>Confidence Level </b> :  {resultantData.Confidence_level}</p>
                                             <img src={resultantData.imageBase64data} alt="outputImg" />
                                         </div>
                                     }
@@ -143,6 +148,13 @@ class ImageAnalysis extends Component {
                         </div>
                     </div>
                 </div>
+                {isLoading &&
+                    <div className="loader_style">
+                        <div className="spinner-border" style={{ width: "3rem", height: "3rem" }} role="status">
+                            <span className="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                }
             </div>
         )
     }
