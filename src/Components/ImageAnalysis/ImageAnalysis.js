@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './ImageAnalysis.css';
 
-import banner from '../../images/background.jpeg';
-
 import Logo from '../../images/logo.png';
 import Upload from '../../images/upload.svg';
 import Profile from '../../images/profile.svg';
@@ -132,15 +130,15 @@ class ImageAnalysis extends Component {
                                 </div>
                             </div>
                             <div className="iaRow">
-                            <div className="box skillBox">
+                                <div className="box skillBox">
                                     <h3 className="result_title">Results :</h3>
-                                    {/* {/* {Object.keys(resultantData).length !== 0 && /} */}
+                                    {Object.keys(resultantData).length !== 0 &&
                                         <div className="resultBox">
                                             <p><b>Image Classification </b> :  {resultantData.image_classification}</p>
                                             <p><b>Confidence Level </b> :  {resultantData.Confidence_level}</p>
-                                            <img src={banner} alt="outputImg" />
+                                            <img src={resultantData.imageBase64data} alt="outputImg" />
                                         </div>
-                                                {/* } */}
+                                    }
                                 </div>
                             </div>
                         </div>
