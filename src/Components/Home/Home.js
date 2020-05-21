@@ -15,7 +15,7 @@ class Home extends Component {
         }
     }
     handleRedirect = ()=>{
-        this.props.history.push('/ImageAnalysis')
+        this.props.history.push('/FileUpload')
     }
     render() {
         return (
